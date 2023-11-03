@@ -1,6 +1,6 @@
-package com.stv.design.designpages;
+package com.iba.design.designpages;
 
-import com.stv.framework.core.drivers.Driver;
+import com.iba.framework.core.drivers.Driver;
 import org.openqa.selenium.WebDriver;
 
 public abstract class Page {

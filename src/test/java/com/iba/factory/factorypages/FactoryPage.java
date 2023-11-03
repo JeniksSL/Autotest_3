@@ -1,6 +1,6 @@
-package com.stv.factory.factorypages;
+package com.iba.factory.factorypages;
 
-import com.stv.framework.core.drivers.Driver;
+import com.iba.framework.core.drivers.Driver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 

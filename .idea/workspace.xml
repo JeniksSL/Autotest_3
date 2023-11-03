@@ -1,14 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd97ff63-a34e-4636-90f8-6375d6a345d8" name="Changes" comment="" />
+    <list default="true" id="fd97ff63-a34e-4636-90f8-6375d6a345d8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/design/designpages/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/design/designpages/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/design/designpages/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/design/designpages/Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/design/designtests/BasicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/design/designtests/BasicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/design/designtests/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/design/designtests/MainTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/factory/factorypages/FactoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/factory/factorypages/FactoryPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/factory/factorypages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/factory/factorypages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/factory/factorypages/MainFactoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/factory/factorypages/MainFactoryPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/factory/factorytests/BasicFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/factory/factorytests/BasicFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/factory/factorytests/MainFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/factory/factorytests/MainFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/factory/smoketests/BasicLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/factory/smoketests/BasicLoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/factory/smoketests/SmokeLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/factory/smoketests/SmokeLoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/framework/core/drivers/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/framework/core/drivers/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/framework/core/lib/WigglePageURLs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/framework/core/lib/WigglePageURLs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/framework/core/utils/TestProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/framework/core/utils/TestProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/framework/core/utils/Waiters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/framework/core/utils/Waiters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2XWJCNk0JQMKZQHMd2RU1k16GhM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -20,9 +53,59 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/STUDYIBA/IdeaProjects/Autotest_3/src/test/java/com/iba",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\STUDYIBA\IdeaProjects\Autotest_3\src\test\java\com\iba" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.SmokeLoginTest">
+    <configuration name="MainFactoryTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Autotest_3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.iba.factory.factorytests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.iba.factory.factorytests" />
+      <option name="MAIN_CLASS_NAME" value="com.iba.factory.factorytests.MainFactoryTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SmokeLoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Autotest_3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.iba.factory.smoketests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.iba.factory.smoketests" />
+      <option name="MAIN_CLASS_NAME" value="com.iba.factory.smoketests.SmokeLoginTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.SmokeLoginTest" />
+        <item itemvalue="TestNG.MainFactoryTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -31,9 +114,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698738776625</updated>
-      <workItem from="1698738779960" duration="1000" />
+      <workItem from="1698738779960" duration="13045000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

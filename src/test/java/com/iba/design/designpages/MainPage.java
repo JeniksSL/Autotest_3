@@ -1,4 +1,4 @@
-package com.stv.design.designpages;
+package com.iba.design.designpages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

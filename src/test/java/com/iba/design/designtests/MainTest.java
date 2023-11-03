@@ -1,6 +1,6 @@
-package com.stv.design.designtests;
+package com.iba.design.designtests;
 
-import com.stv.design.designpages.MainPage;
+import com.iba.design.designpages.MainPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

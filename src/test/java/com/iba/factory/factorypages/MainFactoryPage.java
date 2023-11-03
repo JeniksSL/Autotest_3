@@ -1,4 +1,4 @@
-package com.stv.factory.factorypages;
+package com.iba.factory.factorypages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
