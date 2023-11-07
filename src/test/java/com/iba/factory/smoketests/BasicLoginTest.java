@@ -2,7 +2,6 @@ package com.iba.factory.smoketests;
 
 import com.iba.factory.factorypages.LoginPage;
 import com.iba.factory.factorypages.MainFactoryPage;
-import com.iba.factory.factorytests.BasicFactoryTest;
 import com.iba.framework.core.drivers.Driver;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -16,20 +15,25 @@ public class BasicLoginTest {
     public static WebDriver getDriver() {
         return Driver.getDriver();
     }
+    private WebDriver driver;
+    private MainFactoryPage mainFactoryPage = new MainFactoryPage();
 
-    @BeforeClass(description = "Start browser")
+    @BeforeClass(description = "Start browser, skip accept cookies")
     public void beforeClass() {
-        WebDriver driver = getDriver();
+        driver = getDriver();
         driver.get(START_URL);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.manage().window().maximize();
+        mainFactoryPage.clickOnTrustButton();
     }
     @BeforeMethod(description = "Open login page")
     public void setUp() {
-        MainFactoryPage mainFactoryPage = new MainFactoryPage();
-        mainFactoryPage.clickOnTrustButton();
-        mainFactoryPage.clickOnAccountLink();
+        mainFactoryPage.clickOnSignInLink();
         Assert.assertTrue(new LoginPage().isLoginContainerDisplayed(), "Login page isn't loaded properly");
+    }
+    @AfterMethod(description = "Open main page")
+    public void tearDown(){
+        driver.get(START_URL);
     }
 
     @AfterClass
