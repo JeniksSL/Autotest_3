@@ -1,33 +1,32 @@
 package com.iba.bdd.steps;
 
-import com.iba.factory.factorypages.LoginPage;
-import com.iba.factory.factorypages.MainFactoryPage;
-import com.iba.framework.core.drivers.Driver;
-import io.cucumber.java.*;
+import com.iba.bdd.factorypage.CucumberLoginPage;
+import com.iba.bdd.factorypage.CucumberMainFactoryPage;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.WebDriver;
-
+import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 import static com.iba.framework.core.lib.WigglePageURLs.START_URL;
 import static org.testng.Assert.assertTrue;
 
 public class FirstScenarioSteps {
+    private WebDriver driver;
+    private CucumberMainFactoryPage mainFactoryPage;
 
-    public static WebDriver getDriver() {
-        return Driver.getDriver();
-    }
-    private static WebDriver driver;
-    private static MainFactoryPage mainFactoryPage ;
+    private CucumberLoginPage loginPage;
 
-    @BeforeAll
-    public static void setUp(){
-        driver = getDriver();
-        mainFactoryPage = new MainFactoryPage(driver);
+
+    @Before
+    public void setUp(){
+        driver = new ChromeDriver();
+        mainFactoryPage = new CucumberMainFactoryPage(driver);
+        loginPage = new CucumberLoginPage(driver);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.manage().window().maximize();
     }
-
 
     @Given("^a web browser is on www\\.wiggle\\.com page$")
     public void openPage(){
@@ -51,10 +50,11 @@ public class FirstScenarioSteps {
 
     @Then("^the log in to Wiggle page is shown$")
     public void checkLoginPageIsShown(){
-        assertTrue(new LoginPage(driver).isLoginContainerDisplayed());
+        assertTrue(loginPage.isLoginContainerDisplayed());
     }
-    @AfterAll
-    public static void tearDown(){
+    @After
+    public void tearDown(){
         driver.quit();
     }
+
 }

@@ -4,19 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd97ff63-a34e-4636-90f8-6375d6a345d8" name="Changes" comment="added sign_in.feature">
+    <list default="true" id="fd97ff63-a34e-4636-90f8-6375d6a345d8" name="Changes" comment="added steps">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/iba/bdd/factorypage/CucumberFactoryPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/iba/bdd/factorypage/CucumberLoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/iba/bdd/factorypage/CucumberMainFactoryPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/bdd/steps/FirstScenarioSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/bdd/steps/FirstScenarioSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/bdd/steps/SecondScenarioSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/bdd/steps/SecondScenarioSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/bdd/steps/SignInTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/bdd/cucumbertest/SignInTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/factory/factorypages/FactoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/factory/factorypages/FactoryPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/factory/factorypages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/factory/factorypages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/factory/factorypages/MainFactoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/factory/factorypages/MainFactoryPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/factory/factorytests/MainFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/factory/factorytests/MainFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/factory/smoketests/BasicLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/factory/smoketests/BasicLoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/factory/smoketests/SmokeLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/factory/smoketests/SmokeLoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/framework/core/drivers/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/framework/core/drivers/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/feature/sign_in.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/feature/sign_in.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/design/designpages/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/design/designpages/Page.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +64,7 @@
       <recent name="C:\STUDYIBA\IdeaProjects\Autotest_3\src\test\java\com\iba\bdd" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.SmokeLoginTest">
+  <component name="RunManager" selected="Cucumber Java.Scenario: 01. Open log in to Wiggle page (1)">
     <configuration name="Feature: sign_in" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/com/iba/bdd/feature/sign_in.feature" />
@@ -165,9 +160,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.SmokeLoginTest" />
         <item itemvalue="Cucumber Java.Scenario: 01. Open log in to Wiggle page (1)" />
         <item itemvalue="TestNG.SignInTest" />
+        <item itemvalue="TestNG.SmokeLoginTest" />
         <item itemvalue="Cucumber Java.Feature: sign_in" />
         <item itemvalue="Cucumber Java.Scenario: 01. Open log in to Wiggle page" />
       </list>
@@ -186,7 +181,7 @@
       <workItem from="1701076834047" duration="1031000" />
       <workItem from="1701160525497" duration="3179000" />
       <workItem from="1701166810066" duration="1576000" />
-      <workItem from="1701170447056" duration="1405000" />
+      <workItem from="1701170447056" duration="4146000" />
     </task>
     <task id="LOCAL-00001" summary="added sign_in.feature">
       <created>1701080292433</created>
@@ -202,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701163729188</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added steps">
+      <created>1701171982634</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701171982635</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +235,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added sign_in.feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="added sign_in.feature" />
+    <MESSAGE value="added steps" />
+    <option name="LAST_COMMIT_MESSAGE" value="added steps" />
   </component>
 </project>
