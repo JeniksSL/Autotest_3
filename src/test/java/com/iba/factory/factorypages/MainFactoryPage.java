@@ -19,6 +19,9 @@ public class MainFactoryPage extends FactoryPage {
     public boolean isAccountLinkDisplayed(){
         return accountLink.isDisplayed();
     }
+    public boolean isTrustedButtonDisplayed(){
+        return trustButton.isDisplayed();
+    }
 
     public void clickOnSignInLink(){
         signInLink.click();
