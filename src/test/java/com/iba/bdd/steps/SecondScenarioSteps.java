@@ -10,7 +10,13 @@ import org.openqa.selenium.WebDriver;
 
 import java.time.Duration;
 
+import static com.iba.framework.core.lib.WigglePageURLs.LOGGED_URL;
 import static com.iba.framework.core.lib.WigglePageURLs.START_URL;
+import static com.iba.framework.core.utils.TestProperties.USER_1_LOGIN;
+import static com.iba.framework.core.utils.TestProperties.USER_1_PASSWORD;
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class SecondScenarioSteps {
@@ -19,14 +25,16 @@ public class SecondScenarioSteps {
         return Driver.getDriver();
     }
     private static WebDriver driver;
-    private MainFactoryPage mainFactoryPage = new MainFactoryPage();
+    private static MainFactoryPage mainFactoryPage ;
 
-    private LoginPage loginPage = new LoginPage();
+    private static LoginPage loginPage;
 
 
     @BeforeAll
     public static void setUp(){
         driver = getDriver();
+        mainFactoryPage = new MainFactoryPage(driver);
+        loginPage = new LoginPage(driver);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.manage().window().maximize();
     }
@@ -41,28 +49,27 @@ public class SecondScenarioSteps {
     }
 
     @And("^email address and password is entered$")
-    public void checkCookieWindow(){
-        assertTrue(mainFactoryPage.isTrustedButtonDisplayed());
+    public void enterEmailAndPassword(){
+        loginPage.typeLogin(USER_1_LOGIN);
+        loginPage.typePassword(USER_1_PASSWORD);
+        assertEquals(loginPage.getLoginText(), USER_1_LOGIN);
+        assertEquals(loginPage.getPasswordText(), USER_1_PASSWORD);
     }
 
-    @When("^the accept cookies button is pressed$")
-    public void pressAcceptCookies(){
-        mainFactoryPage.clickOnTrustButton();
-    }
 
-    @And("^the continue button is pressed$")
-    public void pressSignInCookies(){
-        mainFactoryPage.clickOnSignInLink();
+    @When("^the continue button is pressed$")
+    public void pressContinueButton(){
+        loginPage.clickOnSubmitButton();
     }
 
     @Then("^the main Wiggle page is shown$")
     public void checkLoginPageIsShown(){
-        assertTrue(new LoginPage().isLoginContainerDisplayed());
+        assertThat("Main page is not displayed", getDriver().getCurrentUrl(), containsString(LOGGED_URL));
     }
 
-    @And("^the continue button is pressed$")
+    @And("^account link is displayed$")
     public void checkAccountLink(){
-        mainFactoryPage.clickOnSignInLink();
+        assertTrue(new MainFactoryPage(driver).isAccountLinkDisplayed(), "My account link s not displayed");
     }
 
     @AfterAll
@@ -70,19 +77,4 @@ public class SecondScenarioSteps {
         driver.quit();
     }
 
-    /*  public FirstScenarioSteps() {
-       ;
-
-
-       , () -> {
-        });
-       ;
-
-        @When("^the continue button is pressed$", () -> {
-        });
-        @Then("^the main Wiggle page is shown$", () -> {
-        });
-        @And("^account link is displayed$", () -> {
-        });
-    }*/
 }

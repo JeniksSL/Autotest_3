@@ -18,11 +18,12 @@ public class FirstScenarioSteps {
         return Driver.getDriver();
     }
     private static WebDriver driver;
-    private MainFactoryPage mainFactoryPage = new MainFactoryPage();
+    private static MainFactoryPage mainFactoryPage ;
 
     @BeforeAll
     public static void setUp(){
         driver = getDriver();
+        mainFactoryPage = new MainFactoryPage(driver);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.manage().window().maximize();
     }
@@ -44,13 +45,13 @@ public class FirstScenarioSteps {
     }
 
     @And("^the sign in link is pressed$")
-    public void pressSignInCookies(){
+    public void pressSignInLink(){
         mainFactoryPage.clickOnSignInLink();
     }
 
     @Then("^the log in to Wiggle page is shown$")
     public void checkLoginPageIsShown(){
-        assertTrue(new LoginPage().isLoginContainerDisplayed());
+        assertTrue(new LoginPage(driver).isLoginContainerDisplayed());
     }
     @AfterAll
     public static void tearDown(){

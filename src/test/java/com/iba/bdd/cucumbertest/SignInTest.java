@@ -1,4 +1,5 @@
-package com.iba.bdd.steps;
+package com.iba.bdd.cucumbertest;
+
 
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
@@ -8,4 +9,5 @@ import io.cucumber.testng.CucumberOptions;
         features = {"src/test/resources/feature/sign_in.feature"},
         glue = {"com.iba.bdd.steps"})
 public class SignInTest extends AbstractTestNGCucumberTests {
+
 }

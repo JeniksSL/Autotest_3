@@ -7,6 +7,7 @@ Feature: Sign in on www.wiggle.com
     When the accept cookies button is pressed
     And the sign in link is pressed
     Then the log in to Wiggle page is shown
+
   Scenario: 02. Sign in on www.wiggle.com
     Given a web browser is on log in to Wiggle page
     And email address and password is entered
