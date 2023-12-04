@@ -16,6 +16,12 @@ public class CucumberMainFactoryPage extends CucumberFactoryPage{
     @FindBy(xpath = "//button[contains(text(),'Accept all')]")
     private WebElement trustButton;
 
+    @FindBy(id="egain-chat-wrapper")
+    private WebElement chatWrapper;
+
+    @FindBy(xpath = "//a[@href='/terms-and-conditions']")
+    private WebElement termsAdnConditionsLink;
+
     public boolean isSignInLinkDisplayed(){
         return signInLink.isDisplayed();
     }
@@ -30,7 +36,12 @@ public class CucumberMainFactoryPage extends CucumberFactoryPage{
         signInLink.click();
     }
 
+    public void clickOnChatWrapper(){chatWrapper.click();}
+
     public void clickOnTrustButton(){
         trustButton.click();
+    }
+    public void clickOnTermsAdnConditionsLink(){
+        termsAdnConditionsLink.click();
     }
 }

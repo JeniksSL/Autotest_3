@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd97ff63-a34e-4636-90f8-6375d6a345d8" name="Changes" comment="added steps">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/iba/bdd/factorypage/CucumberFactoryPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/iba/bdd/factorypage/CucumberLoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/iba/bdd/factorypage/CucumberMainFactoryPage.java" afterDir="false" />
+    <list default="true" id="fd97ff63-a34e-4636-90f8-6375d6a345d8" name="Changes" comment="added steps and test">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/iba/finalbdd/FinalBddTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/iba/finalbdd/pages/ChatFramePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/iba/finalbdd/steps/FirstScenarioStepsFinal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/iba/finalbdd/steps/SecondScenarioStepsFinal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/feature/final_task.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/bdd/steps/FirstScenarioSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/bdd/steps/FirstScenarioSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/bdd/steps/SecondScenarioSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/bdd/steps/SecondScenarioSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/design/designpages/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/design/designpages/Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/bdd/factorypage/CucumberMainFactoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/bdd/factorypage/CucumberMainFactoryPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/framework/core/lib/WigglePageURLs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/framework/core/lib/WigglePageURLs.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,27 +64,12 @@
       <recent name="C:\STUDYIBA\IdeaProjects\Autotest_3\src\test\resources" />
       <recent name="C:\STUDYIBA\IdeaProjects\Autotest_3\src\test\java\com\iba\bdd" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.iba.finalbdd" />
+      <recent name="com.iba.bdd.finalbdd.steps" />
+    </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: 01. Open log in to Wiggle page (1)">
-    <configuration name="Feature: sign_in" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/com/iba/bdd/feature/sign_in.feature" />
-      <option name="GLUE" value="com.iba.bdd.steps" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="Autotest_3" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: sign_in" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.FinalBddTest">
     <configuration name="Scenario: 01. Open log in to Wiggle page (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/feature/sign_in.feature" />
@@ -104,15 +90,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: 01. Open log in to Wiggle page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Open terms and conditions page and" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/com/iba/bdd/feature/sign_in.feature" />
-      <option name="GLUE" value="com.iba.bdd.steps" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/feature/final_task.feature" />
+      <option name="GLUE" value="com.iba.bdd.steps com.iba.finalbdd.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Autotest_3" />
-      <option name="NAME_FILTER" value="^01\. Open log in to Wiggle page$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^01\. Open log in to Wiggle page$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: 01. Open log in to Wiggle page" />
+      <option name="NAME_FILTER" value="^Open terms and conditions page and$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Open terms and conditions page and$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Open terms and conditions page and" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -120,6 +106,23 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FinalBddTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Autotest_3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.iba.finalbdd.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.iba.finalbdd" />
+      <option name="MAIN_CLASS_NAME" value="com.iba.finalbdd.FinalBddTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -160,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.FinalBddTest" />
+        <item itemvalue="Cucumber Java.Scenario: Open terms and conditions page and" />
         <item itemvalue="Cucumber Java.Scenario: 01. Open log in to Wiggle page (1)" />
         <item itemvalue="TestNG.SignInTest" />
         <item itemvalue="TestNG.SmokeLoginTest" />
-        <item itemvalue="Cucumber Java.Feature: sign_in" />
-        <item itemvalue="Cucumber Java.Scenario: 01. Open log in to Wiggle page" />
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +184,9 @@
       <workItem from="1701076834047" duration="1031000" />
       <workItem from="1701160525497" duration="3179000" />
       <workItem from="1701166810066" duration="1576000" />
-      <workItem from="1701170447056" duration="4146000" />
+      <workItem from="1701170447056" duration="4578000" />
+      <workItem from="1701175581297" duration="990000" />
+      <workItem from="1701667415016" duration="9542000" />
     </task>
     <task id="LOCAL-00001" summary="added sign_in.feature">
       <created>1701080292433</created>
@@ -204,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701171982635</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added steps and test">
+      <created>1701175252485</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701175252485</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,6 +248,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added sign_in.feature" />
     <MESSAGE value="added steps" />
-    <option name="LAST_COMMIT_MESSAGE" value="added steps" />
+    <MESSAGE value="added steps and test" />
+    <option name="LAST_COMMIT_MESSAGE" value="added steps and test" />
   </component>
 </project>
