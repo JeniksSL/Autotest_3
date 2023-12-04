@@ -16,8 +16,8 @@ public class CucumberMainFactoryPage extends CucumberFactoryPage{
     @FindBy(xpath = "//button[contains(text(),'Accept all')]")
     private WebElement trustButton;
 
-    @FindBy(id="egain-chat-wrapper")
-    private WebElement chatWrapper;
+    @FindBy(css=".chat-launch-input")
+    private WebElement chatLauncher;
 
     @FindBy(xpath = "//a[@href='/terms-and-conditions']")
     private WebElement termsAdnConditionsLink;
@@ -32,11 +32,22 @@ public class CucumberMainFactoryPage extends CucumberFactoryPage{
         return trustButton.isDisplayed();
     }
 
+    public boolean isChatLauncherDisplayed(){
+        return chatLauncher.isDisplayed();
+    }
+
     public void clickOnSignInLink(){
         signInLink.click();
     }
 
-    public void clickOnChatWrapper(){chatWrapper.click();}
+    public void clickOnChatLauncher(){chatLauncher.click();}
+
+    public void hoverChatWrapper(){
+        /*Wait<WebDriver> wait = new WebDriverWait(super.getWebDriver(), Duration.ofSeconds(10));
+        chatWrapper = wait.until(ExpectedConditions.visibilityOf(chatWrapper));
+        Actions action  = new Actions(super.getWebDriver());
+        action.moveToElement(chatWrapper).click().build().perform();*/
+    }
 
     public void clickOnTrustButton(){
         trustButton.click();

@@ -15,7 +15,7 @@ public class ChatFramePage {
     private By frame = By.xpath("//iframe[@id='egain-chat-iframe']");
 
     public ChatFramePage(WebDriver webDriver) {
-        Wait<WebDriver> wait = new WebDriverWait(webDriver, Duration.ofSeconds(2));
+        Wait<WebDriver> wait = new WebDriverWait(webDriver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frame));
         PageFactory.initElements(webDriver, this);
         wait.until(ExpectedConditions.visibilityOf(textArea));
