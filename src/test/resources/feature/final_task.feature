@@ -3,7 +3,7 @@ Feature: Pass the final testing test
   I want pass final task in www.wiggle.com testing
 
     Scenario Outline: Open terms and conditions page and
-    ask questions in conversation menu
+    ask some questions in a conversation menu
       Given a web browser is on www.wiggle.com page
       And a cookie agreement button is pressed
       And main page is scrolled to footer

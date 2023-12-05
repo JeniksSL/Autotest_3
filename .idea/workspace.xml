@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd97ff63-a34e-4636-90f8-6375d6a345d8" name="Changes" comment="aaa">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/bdd/factorypage/CucumberMainFactoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/bdd/factorypage/CucumberMainFactoryPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/finalbdd/pages/ChatFramePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/finalbdd/pages/ChatFramePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/finalbdd/steps/FirstScenarioStepsFinal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/finalbdd/steps/FirstScenarioStepsFinal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/feature/final_task.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/feature/final_task.feature" afterDir="false" />
-    </list>
+    <list default="true" id="fd97ff63-a34e-4636-90f8-6375d6a345d8" name="Changes" comment="chat riddle is solved" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -185,7 +179,7 @@
       <workItem from="1701170447056" duration="4578000" />
       <workItem from="1701175581297" duration="990000" />
       <workItem from="1701667415016" duration="9542000" />
-      <workItem from="1701793560436" duration="3134000" />
+      <workItem from="1701793560436" duration="3439000" />
     </task>
     <task id="LOCAL-00001" summary="added sign_in.feature">
       <created>1701080292433</created>
@@ -222,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701710318502</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="chat riddle is solved">
+      <created>1701796919256</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701796919256</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,6 +257,7 @@
     <MESSAGE value="added steps" />
     <MESSAGE value="added steps and test" />
     <MESSAGE value="aaa" />
-    <option name="LAST_COMMIT_MESSAGE" value="aaa" />
+    <MESSAGE value="chat riddle is solved" />
+    <option name="LAST_COMMIT_MESSAGE" value="chat riddle is solved" />
   </component>
 </project>
