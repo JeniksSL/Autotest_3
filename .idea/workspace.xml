@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd97ff63-a34e-4636-90f8-6375d6a345d8" name="Changes" comment="added steps and test">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/iba/finalbdd/steps/js.js" afterDir="false" />
+    <list default="true" id="fd97ff63-a34e-4636-90f8-6375d6a345d8" name="Changes" comment="aaa">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/bdd/factorypage/CucumberFactoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/bdd/factorypage/CucumberFactoryPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/bdd/factorypage/CucumberMainFactoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/bdd/factorypage/CucumberMainFactoryPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/bdd/steps/FirstScenarioSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/bdd/steps/FirstScenarioSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/finalbdd/pages/ChatFramePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/finalbdd/pages/ChatFramePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/finalbdd/steps/FirstScenarioStepsFinal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iba/finalbdd/steps/FirstScenarioStepsFinal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/iba/finalbdd/steps/SecondScenarioStepsFinal.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/feature/final_task.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/feature/final_task.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -189,6 +185,7 @@
       <workItem from="1701170447056" duration="4578000" />
       <workItem from="1701175581297" duration="990000" />
       <workItem from="1701667415016" duration="9542000" />
+      <workItem from="1701793560436" duration="3134000" />
     </task>
     <task id="LOCAL-00001" summary="added sign_in.feature">
       <created>1701080292433</created>
@@ -218,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701175252485</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="aaa">
+      <created>1701710318502</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701710318502</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +255,7 @@
     <MESSAGE value="added sign_in.feature" />
     <MESSAGE value="added steps" />
     <MESSAGE value="added steps and test" />
-    <option name="LAST_COMMIT_MESSAGE" value="added steps and test" />
+    <MESSAGE value="aaa" />
+    <option name="LAST_COMMIT_MESSAGE" value="aaa" />
   </component>
 </project>

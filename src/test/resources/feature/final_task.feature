@@ -1,7 +1,6 @@
-Feature: Pass the testing test
+Feature: Pass the final testing test
   As a student
   I want pass final task in www.wiggle.com testing
-
 
     Scenario Outline: Open terms and conditions page and
     ask questions in conversation menu
@@ -10,8 +9,9 @@ Feature: Pass the testing test
       And main page is scrolled to footer
       When the accept terms and conditions link is pressed
       Then terms and conditions page is displayed
-      And wiggle chat wrapper is clicked
-      And wiggle live chat is displayed
+      And wiggle chat wrapper is shown
+      When wiggle chat wrapper is clicked
+      Then wiggle live chat is displayed
       When "<message>" is typed in typed area of wiggle live chat
       And enter key is pressed
       Then "<message>" is displayed in chat area
@@ -20,4 +20,6 @@ Feature: Pass the testing test
       Examples:
         |message  |
          |hello|
+        |123123|
+      |!@##$%#%|
 

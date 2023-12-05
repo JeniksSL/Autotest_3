@@ -5,11 +5,11 @@ import com.iba.finalbdd.pages.ChatFramePage;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.KeyInput;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -20,6 +20,7 @@ import static com.iba.framework.core.lib.WigglePageURLs.START_URL;
 import static com.iba.framework.core.lib.WigglePageURLs.TERMS_AND_CONDITIONS_URL;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class FirstScenarioStepsFinal {
@@ -27,7 +28,6 @@ public class FirstScenarioStepsFinal {
     private CucumberMainFactoryPage mainFactoryPage;
     private ChatFramePage chatFramePage;
 
-    private By wrapperDiv = By.id("egain-chat-wrapper");
 
     @Before
     public void setUp(){
@@ -56,49 +56,47 @@ public class FirstScenarioStepsFinal {
     @When("^the accept terms and conditions link is pressed$")
     public void pressTermsAndConditionsLink(){
         mainFactoryPage.clickOnTermsAdnConditionsLink();
-
     }
 
     @Then("^terms and conditions page is displayed$")
     public void checkTermsAndConditionsPageIsShown(){
+        Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.urlContains(TERMS_AND_CONDITIONS_URL));
         assertThat("Terms and conditions page is not displayed", driver.getCurrentUrl(), containsString(TERMS_AND_CONDITIONS_URL));
     }
-
-    @And("wiggle chat wrapper is clicked")
-    public void waggleChatWrapperIsClicked() throws InterruptedException {
-
-
-        Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement webElement= wait.until(ExpectedConditions.visibilityOfElementLocated(wrapperDiv));
-        driver.switchTo().frame(driver.findElement(By.id("egain-chat-iframe")));
-        mainFactoryPage = new CucumberMainFactoryPage(driver);
-        mainFactoryPage.clickOnChatLauncher();
-        /*
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("document.getElementById('egain-chat-wrapper').click()");
-        jse.executeScript("document.getElementById('egain-chat-iframe').click()");*/
-       // mainFactoryPage.clickOnChatWrapper();
+    @And("wiggle chat wrapper is shown")
+    public void wiggleChatWrapperIsShown() {
+        mainFactoryPage.waitUntilChatWrapperDisplayed();
+        assertTrue(mainFactoryPage.chatWrapperDisplayed(), "Chat wrapper div is not displayed");
     }
 
-    @And("^wiggle live chat is displayed$")
-    public void enterEmailAndPassword(){
+    @When("wiggle chat wrapper is clicked")
+    public void wiggleChatWrapperIsClicked() {
         chatFramePage=new ChatFramePage(driver);
+        chatFramePage.clickOnChatLauncher();
+    }
+
+    @Then("^wiggle live chat is displayed$")
+    public void wiggleChatIsDisplayed(){
         assertTrue(chatFramePage.textAreaDisplayed());
     }
 
 
     @When("{string} is typed in typed area of wiggle live chat")
-    public void pressContinueButton(String message){
+    public void typeMassageInChat(String message){
         chatFramePage.typeInTextArea(message);
     }
 
-    @And("^enter key is pressed$")
-    public void checkAccountLink(){
 
+    @And("^enter key is pressed$")
+    public void pressEnterKey(){
+        chatFramePage.pressEnterKey();
     }
 
     @Then("{string} is displayed in chat area")
-    public void checkLoginPageIsShown(String message){
+    public void checkMessageIsShown(String message){
+        chatFramePage.waitUntilMessageDisplayed();
+        assertEquals(chatFramePage.getEnteredText(), message);
 
     }
     @After

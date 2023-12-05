@@ -1,8 +1,14 @@
 package com.iba.bdd.factorypage;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class CucumberMainFactoryPage extends CucumberFactoryPage{
     public CucumberMainFactoryPage(WebDriver webDriver) {
@@ -21,6 +27,9 @@ public class CucumberMainFactoryPage extends CucumberFactoryPage{
 
     @FindBy(xpath = "//a[@href='/terms-and-conditions']")
     private WebElement termsAdnConditionsLink;
+
+    @FindBy(id = "egain-chat-wrapper")
+    private WebElement chatWrapper;
 
     public boolean isSignInLinkDisplayed(){
         return signInLink.isDisplayed();
@@ -54,5 +63,14 @@ public class CucumberMainFactoryPage extends CucumberFactoryPage{
     }
     public void clickOnTermsAdnConditionsLink(){
         termsAdnConditionsLink.click();
+    }
+
+    public void waitUntilChatWrapperDisplayed() {
+        Wait<WebDriver> wait = new WebDriverWait(super.getWebDriver(), Duration.ofSeconds(10));
+         wait.until(ExpectedConditions.visibilityOf(chatWrapper));
+    }
+
+    public boolean chatWrapperDisplayed() {
+        return chatWrapper.isDisplayed();
     }
 }
