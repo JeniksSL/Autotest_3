@@ -34,9 +34,6 @@ public class MainFactoryPage extends FactoryPage {
     public boolean isAccountLinkDisplayed(){
         return accountLink.isDisplayed();
     }
-    public boolean isTrustedButtonDisplayed(){
-        return trustButton.isDisplayed();
-    }
 
     public void clickOnSignInLink(){
         signInLink.click();
@@ -51,7 +48,7 @@ public class MainFactoryPage extends FactoryPage {
             wait.until(ExpectedConditions.visibilityOf(trustButton));
             trustButton.click();
         } catch (NoSuchElementException | TimeoutException e) {
-
+//Crutch for cookies
         }
 
     }
@@ -59,11 +56,6 @@ public class MainFactoryPage extends FactoryPage {
         termsAdnConditionsLink.click();
     }
 
-    public boolean isChatLauncherDisplayed(){
-        return chatLauncher.isDisplayed();
-    }
-
-    public void clickOnChatLauncher(){chatLauncher.click();}
 
     public void waitUntilChatWrapperDisplayed() {
         Wait<WebDriver> wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));

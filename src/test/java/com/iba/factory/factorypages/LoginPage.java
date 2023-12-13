@@ -35,9 +35,6 @@ public class LoginPage extends FactoryPage {
     public void clickOnSubmitButton(){
         submitButton.click();
     }
-    public void clickOnSignUpAnchor(){
-        signUpAnchor.click();
-    }
 
     public String getLoginText(){
         return loginInput.getAttribute("value");

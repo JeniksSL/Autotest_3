@@ -1,5 +1,6 @@
 package com.iba.factory.factorypages;
 
+import com.iba.framework.core.drivers.Driver;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -12,7 +13,6 @@ import java.time.Duration;
 
 public class ChatFramePage extends FactoryPage {
 
-    private WebDriver webDriver;
 
     @FindBy(id = "egain-chat-message-input-textarea")
     WebElement textArea;
@@ -24,9 +24,9 @@ public class ChatFramePage extends FactoryPage {
     @FindBy(css = ".bubble > .ng-binding")
     private WebElement messageSpan;
 
-    private By frameBy = By.xpath("//iframe[@id='egain-chat-iframe']");
-
     public boolean textAreaDisplayed() {
+        Wait<WebDriver> wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOf(textArea));
         return textArea.isDisplayed();
     }
     public void typeInTextArea(String message){
@@ -40,11 +40,11 @@ public class ChatFramePage extends FactoryPage {
     }
 
     public void waitUntilMessageDisplayed() {
-        Wait<WebDriver> wait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
+        Wait<WebDriver> wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(messageSpan));
     }
 
     public void pressEnterKey() {
-        new Actions(webDriver).keyDown(Keys.ENTER).keyUp(Keys.ENTER).perform();
+        new Actions(Driver.getDriver()).keyDown(Keys.ENTER).keyUp(Keys.ENTER).perform();
     }
 }

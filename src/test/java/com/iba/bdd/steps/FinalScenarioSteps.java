@@ -1,9 +1,8 @@
-package com.iba.finalbdd.steps;
+package com.iba.bdd.steps;
 
 import com.iba.factory.factorypages.MainFactoryPage;
 import com.iba.factory.factorypages.ChatFramePage;
 import com.iba.framework.core.drivers.Driver;
-import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.*;
@@ -19,7 +18,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-public class FirstScenarioStepsFinal {
+public class FinalScenarioSteps {
     private static WebDriver driver;
     private MainFactoryPage mainFactoryPage;
     private ChatFramePage chatFramePage;
@@ -96,9 +95,6 @@ public class FirstScenarioStepsFinal {
         assertEquals(chatFramePage.getEnteredText(), message);
 
     }
-    @After
-    public void tearDown(){
-        driver.quit();
-    }
+
 
 }

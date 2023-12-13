@@ -1,13 +1,12 @@
 
-@featureTag
+
 Feature: Sign in on www.wiggle.com
   As a user
   I want to sign in on www.wiggle.com
   Scenario: 01. Open log in to Wiggle page
     Given a web browser is on page "https://www.wiggle.co.uk/"
-    And a cookie agreement window is displayed
-    When the accept cookies button is pressed
-    And the sign in link is pressed
+    And the accept cookies button is pressed
+    When the sign in link is pressed
     Then the log in to Wiggle page is shown
 
 
