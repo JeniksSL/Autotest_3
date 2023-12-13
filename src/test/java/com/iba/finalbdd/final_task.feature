@@ -4,7 +4,7 @@ Feature: Pass the final testing test
 
     Scenario Outline: Open terms and conditions page and
     ask some questions in a conversation menu
-      Given a web browser is on www.wiggle.com page
+      Given a web browser is on "https://www.wiggle.co.uk/" page
       And a cookie agreement button is pressed
       And main page is scrolled to footer
       When the accept terms and conditions link is pressed

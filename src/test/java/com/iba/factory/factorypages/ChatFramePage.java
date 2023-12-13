@@ -1,4 +1,4 @@
-package com.iba.finalbdd.pages;
+package com.iba.factory.factorypages;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class ChatFramePage {
+public class ChatFramePage extends FactoryPage {
 
     private WebDriver webDriver;
 
@@ -25,14 +25,6 @@ public class ChatFramePage {
     private WebElement messageSpan;
 
     private By frameBy = By.xpath("//iframe[@id='egain-chat-iframe']");
-
-
-
-    public ChatFramePage(WebDriver webDriver) {
-        webDriver.switchTo().frame(webDriver.findElement(frameBy));
-        this.webDriver=webDriver;
-        PageFactory.initElements(webDriver, this);
-    }
 
     public boolean textAreaDisplayed() {
         return textArea.isDisplayed();

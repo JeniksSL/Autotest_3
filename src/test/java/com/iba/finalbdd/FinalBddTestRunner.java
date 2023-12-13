@@ -6,8 +6,8 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-        features = {"src/test/resources/feature/final_task.feature"},
+        features = {"src/test/java/com/iba/finalbdd/final_task.feature"},
         glue = {"com.iba.finalbdd.steps"})
-public class FinalBddTest extends AbstractTestNGCucumberTests {
+public class FinalBddTestRunner extends AbstractTestNGCucumberTests {
 
 }

@@ -1,15 +1,13 @@
 package com.iba.bdd.steps;
 
-import com.iba.bdd.factorypage.CucumberLoginPage;
-import com.iba.bdd.factorypage.CucumberMainFactoryPage;
+
 import com.iba.factory.factorypages.LoginPage;
 import com.iba.factory.factorypages.MainFactoryPage;
 import com.iba.framework.core.drivers.Driver;
 import io.cucumber.java.*;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
+
 
 import java.time.Duration;
 
@@ -23,15 +21,13 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class SecondScenarioSteps {
-    private WebDriver driver;
-    private CucumberMainFactoryPage mainFactoryPage;
-    private CucumberLoginPage loginPage;
+    private static WebDriver driver;
+    private MainFactoryPage mainFactoryPage;
+    private LoginPage loginPage;
 
     @Before
     public void setUp(){
-        driver = new ChromeDriver();
-        mainFactoryPage = new CucumberMainFactoryPage(driver);
-        loginPage = new CucumberLoginPage(driver);
+        driver = Driver.getDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.manage().window().maximize();
     }
@@ -39,7 +35,9 @@ public class SecondScenarioSteps {
     @Given("^a web browser is on log in to Wiggle page$")
     public void openPage(){
         driver.get(START_URL);
-        mainFactoryPage.clickOnTrustButton();
+        mainFactoryPage = new MainFactoryPage();
+        loginPage = new LoginPage();
+        mainFactoryPage.waitUntilTrustedButtonDisplayedAndIfDisplayedPressIt();
         mainFactoryPage.clickOnSignInLink();
         assertTrue(loginPage.isLoginContainerDisplayed());
     }
@@ -68,10 +66,6 @@ public class SecondScenarioSteps {
         assertTrue(mainFactoryPage.isAccountLinkDisplayed(), "My account link s not displayed");
     }
 
-    @After
-    public void tearDown(){
-        driver.quit();
-    }
 
 
 
