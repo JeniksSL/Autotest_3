@@ -24,6 +24,9 @@ public class ChatFramePage extends FactoryPage {
     @FindBy(css = ".bubble > .ng-binding")
     private WebElement messageSpan;
 
+    @FindBy(id="chat-close-btn")
+    private WebElement closingButton;
+
     public boolean textAreaDisplayed() {
         Wait<WebDriver> wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(textArea));
@@ -46,5 +49,9 @@ public class ChatFramePage extends FactoryPage {
 
     public void pressEnterKey() {
         new Actions(Driver.getDriver()).keyDown(Keys.ENTER).keyUp(Keys.ENTER).perform();
+    }
+
+    public void closeChat(){
+        closingButton.click();
     }
 }

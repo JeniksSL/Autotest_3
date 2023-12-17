@@ -3,6 +3,7 @@ package com.iba.bdd.steps;
 import com.iba.factory.factorypages.MainFactoryPage;
 import com.iba.factory.factorypages.ChatFramePage;
 import com.iba.framework.core.drivers.Driver;
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.*;
@@ -94,6 +95,12 @@ public class FinalScenarioSteps {
         chatFramePage.waitUntilMessageDisplayed();
         assertEquals(chatFramePage.getEnteredText(), message);
 
+    }
+
+    @After
+    public void tearDown(){
+        chatFramePage.closeChat();
+        driver.switchTo().alert().accept();
     }
 
 
